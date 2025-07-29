@@ -4,12 +4,11 @@ Cumulative Analysis
 ===============================================================
 Purpose:
 - To track trends, growth, and performance in key business metrics over time.
-- For time-series analysis and identifying seasonal patterns.
-- To measure growth or decline over specific periods.
+- To track performance over time cumulatively
+- Useful for growth analysis or identifying long-term trends
 
 SQL Functions Used:
-- Date Functions: DATETRUNC(), YEAR(), MONTH()
-- Aggregate Functions: SUM(), COUNT(), AVG(), OVER()
+- Window Functions: SUM(), OVER(), AVG(), OVER()
 ===============================================================
 */
 
