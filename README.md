@@ -4,7 +4,7 @@ A comprehensive SQL-based data warehouse analytics project that demonstrates adv
 
 ## 🎯 Project Overview
 
-This project implements a complete data warehouse solution with the `DataWarehouseAnalytics` database, featuring dimensional modeling and comprehensive analytical queries. The project covers multiple aspects of data analysis including exploratory data analysis, magnitude analysis, ranking, temporal analysis, and performance metrics.
+This project implements a complete data warehouse solution with the `DataWarehouseAnalytics` database, featuring dimensional modeling and comprehensive analytical queries. The project covers multiple aspects of data analysis including exploratory data analysis, magnitude analysis, ranking, temporal analysis, performance metrics, and comprehensive business reporting.
 
 ## 🏗️ Architecture
 
@@ -12,6 +12,7 @@ The project follows a structured approach with:
 - **Data Warehouse**: `DataWarehouseAnalytics` database with dimensional schema
 - **Gold Layer**: Clean, business-ready data stored in the `gold` schema
 - **Analytical Scripts**: Modular SQL scripts for different types of analysis
+- **Business Reports**: Comprehensive views for business intelligence and reporting
 
 ## 📁 Project Structure
 
@@ -19,7 +20,6 @@ The project follows a structured approach with:
 ├── datasets/
 │   ├── csv-files/           # Source CSV data files
 │   ├── DataWarehouseAnalytics.bak  # Database backup file
-│   └── placeholder
 ├── docs/
 │   └── placeholder          # Documentation files
 ├── scripts/
@@ -34,7 +34,9 @@ The project follows a structured approach with:
 │   ├── 08_cumulative_analysis.sql      # Cumulative metrics
 │   ├── 09_performance_analysis.sql     # Performance indicators
 │   ├── 10_part_to_whole.sql           # Composition analysis
-│   └── 11_data_segmentation.sql       # Customer/product segmentation
+│   ├── 11_data_segmentation.sql       # Customer/product segmentation
+│   ├── 12_customer_report.sql         # Customer summary report
+│   └── 13_product_report.sql          # Product summary report
 ├── LICENSE
 └── README.md
 ```
@@ -123,22 +125,37 @@ The project follows a structured approach with:
 - Product categorization
 - Market segmentation
 
+### 12. Customer Report (`12_customer_report.sql`)
+- Comprehensive customer summary view
+- Customer behavior analysis
+- Customer lifecycle metrics
+- Recency, frequency, and monetary analysis
+
+### 13. Product Report (`13_product_report.sql`)
+- Consolidated product performance metrics
+- Product segmentation (High-Performance, Mid-Range, Low-Performance)
+- Product lifecycle analysis
+- Revenue and profitability KPIs
+
 ## 🔧 Key Features
 
 - **Dimensional Modeling**: Star schema implementation with fact and dimension tables
-- **Comprehensive Analysis**: 11 different types of analytical queries
+- **Comprehensive Analysis**: 13 different types of analytical queries and reports
 - **Modular Design**: Each analysis type in separate, well-documented scripts
 - **Business Intelligence**: Real-world business scenarios and KPIs
 - **Performance Optimized**: Efficient SQL queries with proper indexing considerations
+- **Business Reports**: Ready-to-use views for customer and product analysis
 
 ## 💡 SQL Techniques Demonstrated
 
 - **Aggregate Functions**: SUM(), COUNT(), AVG(), MIN(), MAX()
 - **Window Functions**: ROW_NUMBER(), RANK(), DENSE_RANK()
 - **CTEs**: Common Table Expressions for complex queries
+- **Views**: Business-ready reporting views in the gold schema
 - **Joins**: INNER, LEFT, RIGHT joins across dimension and fact tables
 - **Temporal Functions**: Date/time manipulation and analysis
 - **Analytical Functions**: Percentile, running totals, moving averages
+- **Conditional Logic**: CASE statements for business rule implementation
 
 ## 📈 Business Use Cases
 
@@ -147,6 +164,7 @@ The project follows a structured approach with:
 - **Product Analysis**: Analyze product performance and popularity
 - **Geographic Analysis**: Regional performance and market penetration
 - **Temporal Analysis**: Seasonal trends and time-based patterns
+- **Business Reporting**: Executive dashboards and KPI monitoring
 
 ## 🤝 Contributing
 
@@ -172,7 +190,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Microsoft SQL Server documentation and best practices
 - Data warehouse design principles
 - Business intelligence community resources
-
----
-
-⭐ **Star this repository if you found it helpful!**
